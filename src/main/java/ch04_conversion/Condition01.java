@@ -19,11 +19,14 @@ public class Condition01 {
 
 
 
-        int point = sc.nextInt();
-        int VIP_point = 80;
-        int GOLD_point = 60;
-        int SILVER_point = 40;
-        int BRONZE_point = 20;
+        int point;
+        int VIP_point = 100;
+        int GOLD_point = 80;
+        int SILVER_point = 60;
+        int BRONZE_point = 40;
+
+        System.out.print("포인트를 입력하세요 >> ");
+        point = sc.nextInt();
 
         String user_grade="";
         if(point >= VIP_point){
@@ -35,7 +38,7 @@ public class Condition01 {
         }else if(point >= BRONZE_point){
             user_grade = "BRONZE";
         }else{
-            user_grade = "NOMAL";
+            user_grade = "GENERAL";
         }
         System.out.println("유저등급 : "+user_grade);
     }
