@@ -33,15 +33,5 @@ public class Loop06NestedFor {
         }
         System.out.println("짝수의 합 : " + sum_Even);
         System.out.println("홀수의 합 : " + sum_Odd);
-
-        for(int i=0 ; i<5 ; i++){
-            if(i%2==1){
-                System.out.print("  ");
-            }
-            for(int j=0 ; j<50 ; j++){
-                System.out.print("*   ");
-            }
-            System.out.println();
-        }
     }
 }
