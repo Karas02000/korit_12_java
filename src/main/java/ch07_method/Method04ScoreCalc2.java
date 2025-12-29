@@ -2,7 +2,7 @@ package ch07_method;
 
 import java.util.Scanner;
 
-public class Method03ScoreCalc2 {
+public class Method04ScoreCalc2 {
     public static double calcSum(){
         double sum=0;
         Scanner sc = new Scanner(System.in);
