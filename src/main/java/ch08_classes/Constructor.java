@@ -18,12 +18,32 @@ public class Constructor {
     int num;
     String name;
 
-    public Constructor(){
+    public Constructor() {
         System.out.println("NoArgsConstructor(기본생성자)");
     }
 
-    public Constructor(int number){
-        this.num=number;
+    public Constructor(int number) {
+        this.num = number;
         System.out.println("RequiredArgsConstructor(int 매개변수를 필수로 요구하는 생성자)");
+    }
+
+    public Constructor(String string) {
+        this.name = string;
+        System.out.println("AllArgsConstructor(String 매개변수를 요구하는 생성자)");
+    }
+
+    public Constructor(int number, String string) {
+        this.num = number;
+        this.name = string;
+        System.out.println("AllArgsConstructor(int, String 전부를 매개변수로 요구하는 생성자)");
+    }
+    /*
+        지시 사항
+        String title을 매개변수로 하는 생성자를 정의하고
+        AllArgsConstructor(int, String 전부를 매개변수로 요구하는 생성자.)
+     */
+
+    public void displayInfo() {
+        System.out.println(name + " 학생의 학번은 " + num + "번 입니다.");
     }
 }
