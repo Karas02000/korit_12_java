@@ -1,7 +1,7 @@
 package ch10_access_modifire.bank;
 
 public class Bank {
-    private int accountNum;                 // (계좌번호, 정수)
+    private String accountNum;                 // (계좌번호, 정수)
     private String accountHolder;           // (예금주이름, 문자열)
     private int balance;                    // (잔액, 정수)
     private String pinNumber;                  // (비밀번호, 4 자리 정수 0 ~ 9999)
@@ -9,29 +9,29 @@ public class Bank {
         // 기본 생성자
     public Bank(){}
         // 계좌번호만 있는 생성자
-    public Bank(int accountNum){
+    public Bank(String accountNum){
         setAccountNum(accountNum);
     }
         // 계좌번호, 예금주를 받는 생성자
-    public Bank(int accountNum, String accountHolder){
+    public Bank(String accountNum, String accountHolder){
         setAccountNum(accountNum);
         setAccountHolder(accountHolder);
     }
         // 계좌번호, 예금주, 초기 잔액을 받는 생성자
-    public Bank(int accountNum, String accountHolder, int balance){
+    public Bank(String accountNum, String accountHolder, int balance){
         setAccountNum(accountNum);
         setAccountHolder(accountHolder);
         setBalance(balance);
     }
         // 계좌번호, 예금주, 초기 잔액, 비밀번호를 받는 생성자
-    public Bank(int accountNum, String accountHolder, int balance, String pinNumber){
+    public Bank(String accountNum, String accountHolder, int balance, String pinNumber){
         setAccountNum(accountNum);
         setAccountHolder(accountHolder);
         setBalance(balance);
         setPinNumber(pinNumber);
     }
     // Setter
-    public void setAccountNum(int accountNum) {
+    public void setAccountNum(String accountNum) {
         this.accountNum = accountNum;
     }
     public void setAccountHolder(String accountHolder) {
@@ -52,7 +52,7 @@ public class Bank {
         this.pinNumber = pinNumber;
     }
     // Getter
-    public int getAccountNum() {
+    public String getAccountNum() {
         return accountNum;
     }
     public String getAccountHolder() {
