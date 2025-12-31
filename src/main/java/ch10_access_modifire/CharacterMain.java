@@ -10,12 +10,25 @@ class Character{
     int amount = 10;
 // Contructor
     public Character(){
+
+    }
+    public Character(String name , int health, String skill){
+        setName(name);
+        setHealth(health);
+        setSkill(skill);
+    }
+    public Character(String name , int health, int power, String skill, int exp){
+        setName(name);
+        setHealth(health);
+        setPower(power);
+        setSkill(skill);
+        setExp(exp);
     }
 // Setter
     public void setName(String name) {
         this.name = name;
     }
-    public void setHealth(int health) {
+    protected void setHealth(int health) {
         if(health < 0){
             System.out.println("올바르지 않은 값입니다.");
             return;
@@ -32,7 +45,7 @@ class Character{
     public void setSkill(String skill) {
         this.skill = skill;
     }
-    public void setExp(int exp) {
+    protected void setExp(int exp) {
         if(exp < 0){
             System.out.println("올바르지 않은 값입니다.");
             return;
@@ -52,34 +65,31 @@ class Character{
     public String getSkill() {
         return this.skill;
     }
-    public int getExp() {
+    public int gainExp() {
         return this.exp;
     }
     // Method
     public void attack() {
         System.out.println(getName() + "가(이)" + getPower() + "로 공격!");
-        getExp(amount);
+        gainExp(amount);
     }
     public void heal() {
         setHealth(getHealth()+10);
         System.out.println("체력이 10 회복되었습니다. 현재 체력 : " + getHealth());
     }
-    public void getExp(int amount){
+    private void gainExp(int amount){
         System.out.println(getName() + "이(가) 경험치 " + amount + "을(를) 얻었습니다.");
+        setExp(gainExp()+amount);
     }
 }
 
 
 public class CharacterMain {
     public static void main(String[] args) {
-        Character warrior = new Character();
+        Character warrior = new Character("전사", 100, 200, "세로 베기", 30);
+        warrior.attack();
+        warrior.heal();
 
-        warrior.setName("전사");
-        warrior.setHealth(100);
-        warrior.setPower(200);
-        warrior.setSkill("세로 베기");
-        warrior.setExp(30);
-
-
+        Character healer = new Character("힐러", 100, "힐");
     }
 }
