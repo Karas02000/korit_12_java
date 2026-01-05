@@ -1,3 +1,5 @@
+package ch11_arrays;
+
 public class Array07 {
     public static void main(String[] args) {
         int[] scores = {100, 97, 83, 85, 77, 76, 64, 64, 58, 59, 92, 100};
