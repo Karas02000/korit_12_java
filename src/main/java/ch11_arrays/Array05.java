@@ -42,7 +42,7 @@ public class Array05 {
         for(int i = 0 ; i < scores.length ; i++) {
             System.out.print(scores[i]);
             if(i == scores.length - 1){
-                break;
+                return;
             }
             System.out.print("+ / ");
         }
