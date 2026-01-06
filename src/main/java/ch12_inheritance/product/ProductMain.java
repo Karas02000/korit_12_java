@@ -1,4 +1,4 @@
-package ch12_inheritance;
+package ch12_inheritance.product;
 
 public class ProductMain {
     public static void main(String[] args) {

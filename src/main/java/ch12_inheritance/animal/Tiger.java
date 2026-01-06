@@ -1,4 +1,4 @@
-package ch12_inheritance;
+package ch12_inheritance.animal;
 
 public class Tiger extends Animal {
     private double weight;

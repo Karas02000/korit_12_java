@@ -1,4 +1,4 @@
-package ch12_inheritance;
+package ch12_inheritance.book;
 
 public class Book {
     private String title;
