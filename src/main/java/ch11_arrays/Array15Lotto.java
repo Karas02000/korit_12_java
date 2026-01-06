@@ -8,13 +8,26 @@ public class Array15Lotto {
         Random random = new Random();
         int[] lottoNum = new int[6];
 
+        lottoNum[0] = random.nextInt(1, 46);
+
         for(int i=0 ; i<6 ; i++) {
-            int temp = random.nextInt(1, 46);
-            for (int j=0 ; j<i ; j++) {
+            boolean isHave;
+            do {
+                isHave = false;
+                int temp = random.nextInt(1, 46);
 
-            }
+                for (int j = 0; j < i; j++) {
+                    if (lottoNum[j] == temp) {
+                        isHave = true;
+                    } else if (j == i-1) {
+                        lottoNum[i] = temp;
+                    }
+                }
+            }while(isHave);
 
-
+            System.out.println(Arrays.toString(lottoNum));
         }
+        Arrays.sort(lottoNum);
+        System.out.println(Arrays.toString(lottoNum));
     }
 }
