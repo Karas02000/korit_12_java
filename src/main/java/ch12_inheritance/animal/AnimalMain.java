@@ -1,6 +1,6 @@
 package ch12_inheritance.animal;
 
-public class Main {
+public class AnimalMain {
     public static void main(String[] args) {
 //        Animal animal1 = new Animal();
 //        animal1.move();
