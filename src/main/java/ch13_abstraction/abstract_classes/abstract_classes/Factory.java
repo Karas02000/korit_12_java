@@ -1,4 +1,4 @@
-package ch13_abstraction.abstract_classes;
+package ch13_abstraction.abstract_classes.abstract_classes;
 
 public abstract class Factory {
     // field 선언

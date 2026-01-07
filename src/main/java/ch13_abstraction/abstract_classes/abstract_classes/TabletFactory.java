@@ -1,4 +1,4 @@
-package ch13_abstraction.abstract_classes;
+package ch13_abstraction.abstract_classes.abstract_classes;
 /*
     지시 사항
     1. Factory 클래스를 상속 받을 것
