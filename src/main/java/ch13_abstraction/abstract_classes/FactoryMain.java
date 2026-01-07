@@ -47,7 +47,7 @@ public class FactoryMain {
         Factory factory2 = new Factory() {
             @Override
             public void manage() {
-
+                System.out.println("컴퓨터 공장을 정비합니다.");
             }
 
             @Override
@@ -55,5 +55,10 @@ public class FactoryMain {
                 System.out.println(model + " 컴퓨터를 생산합니다.");
             }
         };
+
+        System.out.println();
+
+        factory2.setName("삼성 컴퓨터 공장");
+        factory2.showInfo();
     }
 }
