@@ -7,6 +7,6 @@ public class ChannelUpButton extends Button {
     }
     @Override
     public String onUp() {
-        return "채널을 계속 올립니다.";
+        return "채널을 계속 " + super.onUp();
     }
 }
