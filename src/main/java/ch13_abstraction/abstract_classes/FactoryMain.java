@@ -34,5 +34,26 @@ public class FactoryMain {
         phoneFactory1.manage();
 
         phoneFactory1.showInfo();
+
+        System.out.println();
+
+        TabletFactory tabletFactory1 = new TabletFactory("애플 태블릿 공장");
+        tabletFactory1.setName("구글 태블릿 공장");
+        System.out.println("현재 공장은 " + tabletFactory1.getName() + "으로 변경되었습니다.");
+        tabletFactory1.produce("구글 태블릿");
+        tabletFactory1.manage();
+        tabletFactory1.upgrade("구글 태블릿 10인치 2세대");
+
+        Factory factory2 = new Factory() {
+            @Override
+            public void manage() {
+
+            }
+
+            @Override
+            public void produce(String model) {
+                System.out.println(model + " 컴퓨터를 생산합니다.");
+            }
+        };
     }
 }
