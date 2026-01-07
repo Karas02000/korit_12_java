@@ -16,7 +16,9 @@ public class Main {
         TvRemoteController tc = new TvRemoteController(
                 new PowerButton(),
                 new ChannelUpButton(),
-                new ChannelDownButton()
+                new ChannelDownButton(),
+                new VolumeDownButton(),
+                new VolumeUpButton()
         );
 
         /*
@@ -35,6 +37,11 @@ public class Main {
         tc.onDownChannelDownButton();
         tc.onPressedChannelUpButton();
         tc.onUpChannelUpButton();
+
+        tc.onPressedVolumeDownButton();
+        tc.onDownVolumeDownButton();
+        tc.onPressedVolumeUpButton();
+        tc.onUpVolumeUpButton();
 
         tc.onPressedPowerButton();
     }
