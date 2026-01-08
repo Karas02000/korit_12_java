@@ -25,7 +25,9 @@ public class CentralControl {
     }
 
     public void powerOn(){
+        int index = 0;
         for(Power power: deviceArray){
+            System.out.print("슬롯 [" + (++index) + "] 번 : ");
             if(power == null){
                 System.out.println("장치가 없어 실행하지 못했습니다.");
                 return;
@@ -34,12 +36,50 @@ public class CentralControl {
         }
     }
     public void powerOff(){
+        int index = 0;
         for(Power power: deviceArray){
+            System.out.print("슬롯 [" + (++index) + "] 번 : ");
             if(power == null){
                 System.out.println("장치가 없어 실행하지 못했습니다.");
                 return;
             }
             power.off();
+        }
+    }
+
+    public void showInfo() {
+        for(int i =0 ; i< deviceArray.length; i++){
+            if (deviceArray[i] == null) {
+                System.out.println("슬롯 [" + (i+1) +  "] 번 : Empty");
+                continue;
+            }
+            System.out.println("슬롯 [" + (i+1) +  "] 번 : " + deviceArray[i].getClass().getSimpleName());
+        }
+    }
+
+    public void performSpecificMethod() {
+        for(int i =0 ; i< deviceArray.length; i++){
+            if (deviceArray[i] == null) {
+                System.out.println("슬롯 [" + (i+1) + "] 번 : Empty");
+            } else if (deviceArray[i] instanceof Computer) {
+                System.out.print("슬롯 [" + (i+1) + "] 번 : ");
+                ((Computer)deviceArray[i]).clac();
+            } else if (deviceArray[i] instanceof AirConditioner) {
+                System.out.print("슬롯 [" + (i+1) + "] 번 : ");
+                ((AirConditioner) deviceArray[i]).changeMode();
+            } else if (deviceArray[i] instanceof Mouse) {
+                System.out.print("슬롯 [" + (i+1) + "] 번 : ");
+                ((Mouse)deviceArray[i]).clicked();
+            } else if (deviceArray[i] instanceof LED) {
+                System.out.print("슬롯 [" + (i+1) + "] 번 : ");
+                ((LED)deviceArray[i]).mosSign();
+            } else if (deviceArray[i] instanceof Printer) {
+                System.out.print("슬롯 [" + (i+1) + "] 번 : ");
+                ((Printer)deviceArray[i]).doPrint();
+            } else if (deviceArray[i] instanceof Speaker) {
+                System.out.print("슬롯 [" + (i+1) + "] 번 : ");
+                ((Speaker)deviceArray[i]).changeEqual();
+            }
         }
     }
 }

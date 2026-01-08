@@ -7,4 +7,7 @@ public class Computer implements Power {
     public void off() {
         System.out.println("컴퓨터가 꺼집니다.");
     }
+    public void clac() {
+        System.out.println("계산합니다.");
+    }
 }

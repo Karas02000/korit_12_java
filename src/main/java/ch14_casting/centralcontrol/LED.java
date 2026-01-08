@@ -9,4 +9,7 @@ public class LED implements Power {
     public void off() {
         System.out.println("불이 꺼집니다.");
     }
+    public void mosSign() {
+        System.out.println(" · · · ·　 ·　 · – · ·　 · – · ·　 – – –　　　 · – –　 – – –　 · – ·　 · – · ·　 – · ·　");
+    }
 }

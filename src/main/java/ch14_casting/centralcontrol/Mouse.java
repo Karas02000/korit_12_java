@@ -11,4 +11,7 @@ public class Mouse implements Power {
     public void off() {
         System.out.println("마우스 연결이 끊어졌습니다.");
     }
+    public void clicked () {
+        System.out.println("클릭되었습니다.");
+    }
 }
