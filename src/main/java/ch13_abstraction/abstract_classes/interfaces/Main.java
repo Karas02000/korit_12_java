@@ -45,14 +45,6 @@ public class Main {
 
         tc.onPressedPowerButton();
 
-
-
-
-
-
-
-
-
         //-------------------------------------------------------------------
 
         AirConditionerController ac = new AirConditionerController(
