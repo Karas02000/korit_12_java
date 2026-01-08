@@ -9,6 +9,6 @@ public class Mouse implements Power {
     }
     @Override
     public void off() {
-        System.out.printf("마우스 연결이 끊어졌습니다.");
+        System.out.println("마우스 연결이 끊어졌습니다.");
     }
 }
