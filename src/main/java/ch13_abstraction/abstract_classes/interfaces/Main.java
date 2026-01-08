@@ -44,5 +44,31 @@ public class Main {
         tc.onUpVolumeUpButton();
 
         tc.onPressedPowerButton();
+
+
+
+
+
+
+
+
+
+        //-------------------------------------------------------------------
+
+        AirConditionerController ac = new AirConditionerController(
+                new PowerButton(),
+                new DownButton(),
+                new UpButton(),
+                new ShiftButton()
+        );
+
+        ac.onPowerButtonPress();
+        ac.onDownBUttonPress();
+        ac.onDownButtonDown();
+        ac.onUpButtonPress();
+        ac.onUpButtonUp();
+        ac.onShiftButtonPress();
+        ac.onShiftButtonPress();
+        ac.onPowerButtonPress();
     }
 }
