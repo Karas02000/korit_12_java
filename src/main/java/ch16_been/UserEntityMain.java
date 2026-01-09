@@ -9,5 +9,11 @@ public class UserEntityMain {
         user1.setName("Jack");
 
         System.out.println(user1.toString());
+
+        UserEntityLombok user2 = new UserEntityLombok("Jack");
+        user2.setPassword(1234);
+        System.out.println(user2.getName());
+
+        UserEntityLombok user3 = new UserEntityLombok(1,1234,"Jack","Jackpot777");
     }
 }
