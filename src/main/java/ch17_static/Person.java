@@ -1,7 +1,10 @@
 package ch17_static;
 
+import lombok.ToString;
+
 import java.util.Locale;
 
+@ToString
 public class Person {
     private String name;
     private int age;
