@@ -1,12 +1,9 @@
 package game.system;
 
-import game.item.Bow;
-import game.item.Staff;
-import game.item.Sword;
-import game.item.Weapon;
+import game.item.*;
 
 public class Inventory {
-    Weapon[] weaponsSlot;
+    Weapon[] weaponsSlot = new Weapon[10];
 
     public void addWeapon(Weapon weapon) {
         boolean isFull = true;
@@ -24,21 +21,24 @@ public class Inventory {
 
     public void attackAll() {
         for (Weapon w :  weaponsSlot) {
+            if (w == null) break;
             w.attack();
         }
     }
 
     public void useSpecialAbilities() {
-        for (Weapon w  :  weaponsSlot) {
-            if (w instanceof Sword) {
-                Sword s = (Sword) w;
-                s.parry();
-            } else if (w instanceof Bow) {
-                Bow b =  (Bow) w;
-                b.snipe();
-            } else if (w instanceof Staff) {
-                Staff t = (Staff) w;
-                t.castSpell();
+        for (Weapon w : weaponsSlot) {
+            if (w == null) {
+                break;
+            } else if (w.getClass().getSimpleName().equals("Sword")) {
+                Sword sword = (Sword) w;
+                sword.parry();
+            } else if (w.getClass().getSimpleName().equals("Bow")) {
+                Bow bow = (Bow) w;
+                bow.snipe();
+            } else if (w.getClass().getSimpleName().equals("Staff")) {
+                Staff staff = (Staff) w;
+                staff.castSpell();
             }
         }
     }
