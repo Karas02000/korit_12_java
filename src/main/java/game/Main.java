@@ -15,6 +15,8 @@ public class Main {
             System.out.println("Error");
         }
 
+        System.out.println();
+
         try {
             inven.attackAll();
             inven.useSpecialAbilities();

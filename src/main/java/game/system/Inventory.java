@@ -30,14 +30,11 @@ public class Inventory {
         for (Weapon w : weaponsSlot) {
             if (w == null) {
                 break;
-            } else if (w.getClass().getSimpleName().equals("Sword")) {
-                Sword sword = (Sword) w;
+            } else if (w instanceof Sword sword) {
                 sword.parry();
-            } else if (w.getClass().getSimpleName().equals("Bow")) {
-                Bow bow = (Bow) w;
+            } else if (w instanceof Bow bow) {
                 bow.snipe();
-            } else if (w.getClass().getSimpleName().equals("Staff")) {
-                Staff staff = (Staff) w;
+            } else if (w instanceof Staff staff) {
                 staff.castSpell();
             }
         }
