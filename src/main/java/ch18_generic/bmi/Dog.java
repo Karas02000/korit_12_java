@@ -1,14 +1,12 @@
 package ch18_generic.bmi;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
 
+@AllArgsConstructor
 @Getter
-@Setter
 public class Dog {
     private String name;
-    private double hight;
+    private double height;
     private double weight;
-    public Dog(){}
-    public Dog(String name, double hight, double weight){}
 }
