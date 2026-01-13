@@ -3,8 +3,8 @@ package ch18_generic.bmi;
 public class PersonMain {
     public static void main(String[] args) {
         Person person1 = new Person("김일", 172, 68);
-        Bmi bmi1 = new Bmi();
-        bmi1.printResult(person1);
+//        Bmi bmi1 = new Bmi();
+//        bmi1.printResult(person1);
 
         // 이상과 같이 작성했을 때 멀쩡하게 동작합니다.
 
