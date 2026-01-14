@@ -16,19 +16,12 @@ class Book{
     private String title;
     private String author;
     private List<String> categories;
-
-    public void addCategories(String str) {
-        categories.add(str);
-    }
 }
 public class JSON3Task {
     public static void main(String[] args) {
-        Book book1 = new Book(101L, "자바 마스터", "안선생", new ArrayList<>());
-        Book book2 = new Book(102L, "파이썬 입문", "김철수", new ArrayList<>());
+        Book book1 = new Book(101L, "자바 마스터", "안선생", List.of("프로그래밍, 컴퓨터공학"));
+        Book book2 = new Book(102L, "파이썬 입문", "김철수", List.of("데이터 분석"));
 
-        book1.addCategories("프로그래밍");
-        book1.addCategories("컴퓨터공학");
-        book2.addCategories("데이터분석");
 
 
         // Mission 2
