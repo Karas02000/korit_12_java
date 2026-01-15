@@ -14,9 +14,11 @@ public class ScoreMain {
         Scanner sc = new Scanner(System.in);
 
         try{
+            System.out.print("점수를 입력하여 주세요. >>> ");
             int score = sc.nextInt();
             sc.nextLine();
             checkScore(score);
+            System.out.println("점수가 성공적으로 저장되었습니다.");
         } catch(InvalidScoreException e) {
             System.out.println("입력 오류 : " + e.getMessage());
         } catch(InputMismatchException e){
