@@ -15,10 +15,12 @@ public class IdMain {
 
         try {
             System.out.print("ID를 입력하여 주세요. >>>");
-            String id = sc.nextLine();
+            String id = sc.nextLine().trim();
             checkId(id);
         } catch (InvalidIdException e) {
             System.out.println("오류 발생 : " + e.getMessage());
-        } catch (Exception e) {}
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("예기치못한 문제가 발생하였습다.");}
     }
 }
